@@ -17,14 +17,14 @@ public class Controller1 {
 
     @GetMapping("/home")
     public String home() {
-        return "index"; 
+        return "pages/index"; 
     }
 
     @PostMapping("/submit")
     public String submit(PathModel1 student, Model model) {
         repo.save(student);
         model.addAttribute("message", "Student added successfully!");
-        return "index";
+        return "pages/index";
     }
 
 }
